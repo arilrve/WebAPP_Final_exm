@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!-- CSS -->
+    <link rel="stylesheet" href="css/bmi.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<!-- JS -->
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="js/Bmi.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <title>Document</title>
+
+ <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+
+</head>
+<body >
+    <div data-role="header" data-theme="b" style="overflow: hidden;">
+        <h1>BMI</h1>
+        <a data-icon="home" class="ui-btn-left" onclick="javascript:location.href='MainPage.html'">主頁</a>  
+    </div>
+    
+    <div class="div1">
+        <div class="background">
+            <img src="img/bmi_background.jpg">
+        </div>
+    </div>
+    <div>
+    體脂指數BMI=體重（kg）÷身高(m)²<br>
+    過輕：低於18.5<br>
+    正常：18.5-24.99<br>
+    過重：25-28<br>
+    肥胖：28-32<br>
+    非常肥胖：高於32<br>
+    算算看自己的BMI是多少吧!!
+    </div>
+
+    <div>
+        <form>
+            <div>
+                <input type="number" id="height" placeholder="Height(m)" value=""/>
+            </div>
+            <div>
+                <input type="number" id="weight" placeholder="Weight(kg)" value=""/>
+            </div>
+        </form>
+    </div>
+
+    
+    <div>
+        <button onclick="send()">計算BMI</button>
+    </div>
+
+    <div>
+        你的BMI為:<input type="number" id="Bmiresult" style=" background-color: #D9F4F1" name=bmi/>
+    </div>
+
+
+    <div id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          體重過輕
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+          體脂指數BMI=體重（kg）÷身高(m)²，過輕：低於18.5，正常：18.5-24.99，過重：25-28，肥胖：28-32，非常肥胖：高於32，
+          專家指出最理想的體重指數是22。如果你的體脂指數低於18.5，說明你真的是該增肌了！
+          <br>
+          <a onclick="javascript:location.href='BMIless.html'">改善方法</a>	
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          體重適中
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+          如果你的BMI在18.5 - 24.99之間，這代表你的身體十分健康，請繼續維持<br>
+          記得早睡早起，規律運動，維持健康的身體^^
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          體重過重
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+         BMI>25就代表你的體重已經過重了，<br>
+         肥胖影響的不只是外觀，對身體健康更是有極大的影響。肥胖者相對於體重正常者有3倍以上的機會導致糖尿病、血脂異常、脂肪肝、高血壓、呼吸困難、睡眠呼吸中止。<br>
+         國人十大死因中與肥胖相關者就高達六項（惡性腫瘤、心血管疾病、腦中風、糖尿病、慢性肝病及肝硬化、慢性肺病），因此肥胖對健康影響之大，切不可漠視。<br>
+         <a onclick="javascript:location.href='BMIoverweight.html'">改善方法</a>	
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script>app.initialize();</script> 
+</body>
+</html>

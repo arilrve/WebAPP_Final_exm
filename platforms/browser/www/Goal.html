@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!-- CSS -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="css/Goal.css" />
+<!-- JS -->
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <!-- <script type="text/javascript" src="js/angularJS.js"></script> -->
+    <script type="text/javascript" src="js/Goal.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <title>Document</title>
+</head>
+<body onload="onload()">
+    <div data-role="header" style="overflow:hidden;" data-theme="b">
+        <h1>Goal</h1>
+        <a data-icon="home" class="ui-btn-left" onclick="javascript:location.href='MainPage.html'">主頁</a>
+        <a data-icon="plus" class="ui-btn-right" onclick="addItem()">Add Goal</a>
+    </div>
+
+    <div id="addItem">
+        <input id="input"  type="text" placeholder="What do you want to do?">
+        <div>
+            <button id="add" onclick="addGoal()">Add</button>
+            <button id="cancel" onclick="cancel()">Cancel</button>
+        </div>
+    </div>
+
+    <ul id="List" data-role="listview" data-inset="true">
+        
+    </ul>
+    <div is="footer" data-position="fixed" data-role="footer" data-theme="b">
+        <div is="navbar" data-role="navbar">
+          <ul>
+            <li is="navbtn">
+                <button onclick="Delete()">Delete</button>
+              <button onclick="complete()">Complete</button>
+            </li>
+          </ul>
+        </div>
+</body>
+</html>

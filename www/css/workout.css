@@ -1,0 +1,13 @@
+
+.background{  
+    position: relative;
+    width: 90vw;
+    height: 50vh; 
+    margin:5% auto;
+    background-attachment: fixed;
+    box-shadow: 5px 5px;
+}
+.background img{
+height: 100%;
+width:  100%;
+}

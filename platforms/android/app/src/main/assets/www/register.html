@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel=stylesheet type="text/css" href="css/login.css">
+        <script type="text/javascript" src="js/angularJS.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        
+        <title>Hello World</title>
+    </head>
+    <body>
+        <div ng-app="App">
+            <div class="form-container" ng-class="done">
+                <div class="login-form">
+                    <h3>Welcome to ASIA</h3>
+                    <div>
+                        <input type="email" placeholder="E-mail" id="user" value="">
+                    </div>
+                    <div>
+                        <input type="password" placeholder="Password" id="passwd" value="">
+                    </div>
+                    <button class="data-loading-btn" onclick="registered();">
+                        <span data-loaded-msg="THANK YOU!">registered</span>
+                    </button>
+                        <!-- <span id="status"></span> -->
+                </div>
+            <div class="thank-msg">
+                <h3>You are logged in</h3>
+                <button ng-click="done= ''">Try Again</button>
+            </div>
+        </div>
+    </div>
+       <script>app.initialize();</script> 
+    </body>
+</html>

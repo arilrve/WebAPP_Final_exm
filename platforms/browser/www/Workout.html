@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!-- CSS -->
+    <link rel="stylesheet" href="css/workout.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<!-- JS -->
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <title>Document</title>
+</head>
+<body >
+    <div data-role="header" data-theme="b" style="overflow: hidden;">
+        <h1>Workout</h1>
+        <a data-icon="home" class="ui-btn-left" onclick="javascript:location.href='MainPage.html'">主頁</a>  
+    </div>
+    <div class="ui-field-contain">
+        <select name="select-custom-1" id="selsect-custom-1" data-native-menu="false" data-theme="b">
+            <!-- <option value="0" onclick="javascript:location.href='BMIless.html'">BMI Range</option> -->
+            <option value="1" onclick="javascript:location.href=''">胸部</option>
+            <option value="2" onclick="javascript:location.href=''">手臂</option>
+            <option value="3" onclick="javascript:location.href=''">背部</option>
+            <option value="1" onclick="javascript:location.href=''">腹部</option>
+            <option value="2" onclick="javascript:location.href=''">腿部</option>
+        </select>
+    </div>
+    <div class="background">
+        <img src="img/workout.jpg">
+    </div>
+
+    <div data-role="footer" data-theme="b" style="overflow: hidden;" data-position="fixed"> 
+        <h1>Workout</h1> 
+    </div>
+    
+    <script>app.initialize();</script> 
+</body>
+</html>

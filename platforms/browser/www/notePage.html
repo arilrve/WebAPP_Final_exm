@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- CSS -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <!-- JS -->
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="js/angularJS.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+<!-- Title  -->
+    <title>NotePage</title>
+</head>
+<body onload="noteOnload()">
+    <div data-role="header" style="overflow: hidden;" data-theme="b">
+        <h1>NotePage</h1>
+        <a data-icon="home" class="ui-btn-left" onclick="javascript:location.href='MainPage.html'">主頁</a>
+        <a data-icon="plus" class="ui-btn-right" onclick="javascript:location.href='addNewNote.html'">新增</a>
+    </div>
+    <div id = "mainContent">
+        <div id ="div3">
+            
+        </div>
+        <script>app.initialize()</script>
+    </div>
+        
+
+</body>
+</html>

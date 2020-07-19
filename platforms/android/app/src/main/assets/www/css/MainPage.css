@@ -1,0 +1,42 @@
+
+.background{  
+    padding: 5%;
+    position: relative;
+    width: 90vw;
+    height: 45vh; 
+    margin:5% auto;
+    background-attachment: fixed;
+    box-shadow: 5px 5px;
+}
+.background img{
+    height: 100%;
+    width:  100%;
+    animation-duration: 4s;
+    animation-name: imgfadein;
+}
+.div1{
+    background-color: black;
+}
+.h1{    
+        animation-duration: 4s;
+        animation-name: fadein;
+        
+}
+@keyframes fadein{
+    
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
+}
+@keyframes imgfadein{
+    
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
+}

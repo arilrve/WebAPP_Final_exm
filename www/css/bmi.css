@@ -1,0 +1,17 @@
+
+.background{  
+    padding: 5%;
+    position: relative;
+    width: 90vw;
+    height: 45vh; 
+    margin:5% auto;
+    background-attachment: fixed;
+    box-shadow: 5px 5px;
+}
+.background img{
+    height: 100%;
+    width:  100%;
+}
+.div1{
+    background-color: black;
+}

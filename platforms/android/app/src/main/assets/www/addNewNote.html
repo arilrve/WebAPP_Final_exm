@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+<!-- CSS -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<!-- JS -->
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="js/angularJS.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+<!-- Title  -->
+    <title>Document</title>
+</head>
+<body onload="onLoad()">
+    <div data-role="header" style="overflow:hidden;" data-theme="b">
+        <h1>Add new note</h1>
+        <a data-icon="home" class="ui-btn-left" onclick="javascript:location.href='MainPage.html'">主頁</a>
+    </div>
+    <div id ="mainContent" style="width:95% ;margin:0 auto;">
+        <div class="row ui-field-contain" style="text-align:right">
+            <label for ="noteType" class="col-3">類別:</label>
+            <select id ="noteType" class="col-7">
+                <option value="work">公事</option>
+                <option value="family">家事</option>
+                <option value="friend">朋友</option>
+                <option value="other">其他</option>
+            </select>
+        </div>
+        <div class="ui-field-contain" style="text-align:right;">
+                <label for="title">標題:</label>
+                <input type="text" id="title" placeholder="Text input" value="">
+        </div>
+        <div class="ui-field-contain">
+                <label for="description" style="text-align: right;">內容</label>
+                <textarea cols ="40" rows="8" id="description">Textarea</textarea>
+        </div>
+        <button class="ui-button ui-shadow" onclick="sendNote2DB()">Send</button>
+    </div>
+            <script>app.initialize()</script>
+    </div>
+</body>
+</html>
